@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.LoginMemberMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.Member">
+    <!--@mbg.generated-->
+    <!--@Table `member`-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="user_mail" jdbcType="VARCHAR" property="userMail" />
+    <result column="pay_password" jdbcType="VARCHAR" property="payPassword" />
+    <result column="user_mobile" jdbcType="VARCHAR" property="userMobile" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="user_regip" jdbcType="VARCHAR" property="userRegip" />
+    <result column="user_lasttime" jdbcType="TIMESTAMP" property="userLasttime" />
+    <result column="user_lastip" jdbcType="VARCHAR" property="userLastip" />
+    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="birth_date" jdbcType="CHAR" property="birthDate" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+  </resultMap>
+
+</mapper>

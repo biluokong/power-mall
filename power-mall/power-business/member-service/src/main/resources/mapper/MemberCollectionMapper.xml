@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.MemberCollectionMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.MemberCollection">
+    <!--@mbg.generated-->
+    <!--@Table member_collection-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="prod_id" jdbcType="BIGINT" property="prodId" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+
+</mapper>

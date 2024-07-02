@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.LoginSysUserMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.LoginSysUser">
+    <id column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+  </resultMap>
+
+  <select id="selectPermsByUserId" resultType="java.lang.String">
+    SELECT
+      t1.perms
+    FROM
+      sys_menu t1
+        JOIN sys_role_menu t2
+        JOIN sys_user_role t3 ON ( t1.menu_id = t2.menu_id AND t2.role_id = t3.role_id )
+    WHERE
+      t3.user_id = #{userId}
+      AND t1.type = 2
+  </select>
+</mapper>

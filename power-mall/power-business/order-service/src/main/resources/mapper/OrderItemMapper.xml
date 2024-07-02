@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.OrderItemMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.OrderItem">
+    <!--@mbg.generated-->
+    <!--@Table order_item-->
+    <id column="order_item_id" jdbcType="BIGINT" property="orderItemId" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="order_number" jdbcType="VARCHAR" property="orderNumber" />
+    <result column="prod_id" jdbcType="BIGINT" property="prodId" />
+    <result column="sku_id" jdbcType="BIGINT" property="skuId" />
+    <result column="prod_count" jdbcType="INTEGER" property="prodCount" />
+    <result column="prod_name" jdbcType="VARCHAR" property="prodName" />
+    <result column="sku_name" jdbcType="VARCHAR" property="skuName" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="product_total_amount" jdbcType="DECIMAL" property="productTotalAmount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="comm_sts" jdbcType="INTEGER" property="commSts" />
+  </resultMap>
+
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.SysMenuMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.SysMenu">
+    <id column="menu_id" jdbcType="BIGINT" property="menuId" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="perms" jdbcType="VARCHAR" property="perms" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="order_num" jdbcType="INTEGER" property="orderNum" />
+  </resultMap>
+  
+  <select id="selectUserMenuListByUserId" resultType="com.biluo.domain.SysMenu">
+    SELECT
+      t1.*
+    FROM
+      sys_menu t1
+        JOIN sys_role_menu t2
+        JOIN sys_user_role t3 ON ( t1.menu_id = t2.menu_id AND t2.role_id = t3.role_id )
+    WHERE
+      t3.user_id = #{loginUserId}
+      AND ( t1.type = 0 OR t1.type = 1 );
+  </select>
+</mapper>

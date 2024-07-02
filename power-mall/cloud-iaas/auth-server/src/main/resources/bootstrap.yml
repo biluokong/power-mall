@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: auth-server
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 77aeae1c-4581-4440-90f3-cc1defcdf55e
+        group: A_GROUP
+        service: ${spring.application.name}
+      config:
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: ${spring.cloud.nacos.discovery.group}
+        prefix: ${spring.application.name}
+        file-extension: yml
+        # 配置中心共享配置（默认是DEFAULT_GROUP下的）
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: dev
+#wx:
+#  appid: ${wx-appid}
+#  secret: ${wx-secret}
+#  url: https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code
+#  pwd: $2a$10$Q9Z7w/s59CV07YNDpjQKbegSoiqAKji8VHJvDgShU2pDUY2kjdywa
+
+# 开发环境配置
+#server:
+#  port: 8081
+
+# 共享配置
+#spring:
+#  datasource:
+#    druid:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://127.0.0.1:3306/mall?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+#      username: root
+#      password: ${common-pwd}
+#  redis:
+#    host: ${redis-host}
+#    port: 6379
+#    password: ${common-pwd}
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#    format:
+#      date-time: yyyy-MM-dd HH:mm:ss
+#      date: yyyy-MM-dd
+#      time: HH:mm:ss
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  mapper-locations: classpath*:mapper/**/*.xml

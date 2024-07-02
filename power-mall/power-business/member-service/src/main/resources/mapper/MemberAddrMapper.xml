@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.MemberAddrMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.MemberAddr">
+    <!--@mbg.generated-->
+    <!--@Table member_addr-->
+    <id column="addr_id" jdbcType="BIGINT" property="addrId" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="receiver" jdbcType="VARCHAR" property="receiver" />
+    <result column="province_id" jdbcType="BIGINT" property="provinceId" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="city_id" jdbcType="BIGINT" property="cityId" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="area_id" jdbcType="BIGINT" property="areaId" />
+    <result column="post_code" jdbcType="VARCHAR" property="postCode" />
+    <result column="addr" jdbcType="VARCHAR" property="addr" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="common_addr" jdbcType="INTEGER" property="commonAddr" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+
+</mapper>

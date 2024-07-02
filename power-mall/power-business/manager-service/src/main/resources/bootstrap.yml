@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: manager-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 77aeae1c-4581-4440-90f3-cc1defcdf55e
+        group: A_GROUP
+        service: ${spring.application.name}
+      config:
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: ${spring.cloud.nacos.discovery.group}
+        prefix: ${spring.application.name}
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: dev
+
+#mybatis-plus:
+#  global-config:
+#    db-config: # 默认字段更新策略是not_null
+#      update-strategy: not_empty
+---
+#server:
+#  port: 8082
+#swagger3:
+#  base-package: com.biluo.controller
+#  name: biluo
+#  url: https://gitee.com/biluoer/project
+#  email: lisi@qq.com
+#  title: 后台管理系统-系统管理模块接口
+#  description: 实现后台管理系统的所有接口,根路径/manager-service
+#  license: biluo
+#  licenseUrl: https://gitee.com/biluoer/project
+#  terms-of-service-url: https://gitee.com/biluoer/project
+#  version: 1.0

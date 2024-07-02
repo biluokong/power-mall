@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 77aeae1c-4581-4440-90f3-cc1defcdf55e
+        group: A_GROUP
+        service: ${spring.application.name}
+      config:
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: ${spring.cloud.nacos.discovery.group}
+        prefix: ${spring.application.name}
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: dev
+
+#feign:
+#  sentinel:
+#    enabled: true
+---
+#spring:
+#  rabbitmq:
+#    host: ${redis-host}
+#    port: 5672
+#    username: rabbitmq
+#    password: ${common-pwd}
+#    virtual-host: /mall
+#    listener:
+#      simple:
+#        # 开启消费者确认模式为手动
+#        acknowledge-mode: manual
+#server:
+#  port: 8086
+#swagger3:
+#  base-package: com.biluo.controller
+#  name: biluo
+#  url: https://gitee.com/biluoer/project
+#  email: lisi@qq.com
+#  title: 后台管理系统-订单管理模块接口
+#  description: 实现后台管理系统的所有接口,根路径/product-service
+#  license: biluo
+#  licenseUrl: https://gitee.com/biluoer/project
+#  terms-of-service-url: https://gitee.com/biluoer/project
+#  version: 1.0

@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery: # 服务注册配置
+        namespace: 77aeae1c-4581-4440-90f3-cc1defcdf55e
+        group: A_GROUP
+        service: ${spring.application.name}
+      config: # 配置中心配置
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: ${spring.cloud.nacos.discovery.group}
+        prefix: ${spring.application.name}
+        file-extension: yml
+  # 多环境配置
+  profiles:
+    active: dev
+#共享配置
+#server:
+#  port: 80
+#spring:
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          # 开启动态路由
+#          enabled: true
+#  redis:
+#    host: ${redis-host}
+#    port: 6379
+#    password: ${common-pwd}
+## 自定义的方向白名单路径
+#gateway:
+#  white:
+#    allow-urls:
+#      - /doLogin
+#      - /free
+
+

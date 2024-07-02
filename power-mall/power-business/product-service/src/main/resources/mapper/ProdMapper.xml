@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.ProdMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.Prod">
+    <id column="prod_id" jdbcType="BIGINT" property="prodId" />
+    <result column="prod_name" jdbcType="VARCHAR" property="prodName" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="ori_price" jdbcType="DECIMAL" property="oriPrice" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="brief" jdbcType="VARCHAR" property="brief" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="imgs" jdbcType="VARCHAR" property="imgs" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="sold_num" jdbcType="INTEGER" property="soldNum" />
+    <result column="total_stocks" jdbcType="INTEGER" property="totalStocks" />
+    <result column="delivery_mode" jdbcType="VARCHAR" property="deliveryMode" />
+    <result column="delivery_template_id" jdbcType="BIGINT" property="deliveryTemplateId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="putaway_time" jdbcType="TIMESTAMP" property="putawayTime" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+  </resultMap>
+
+</mapper>

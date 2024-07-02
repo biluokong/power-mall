@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.LoginMemberMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.LoginMember">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="user_regip" jdbcType="VARCHAR" property="userRegip" />
+    <result column="user_lasttime" jdbcType="TIMESTAMP" property="userLasttime" />
+    <result column="user_lastip" jdbcType="VARCHAR" property="userLastip" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+  </resultMap>
+</mapper>

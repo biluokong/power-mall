@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biluo.mapper.CategoryMapper">
+  <resultMap id="BaseResultMap" type="com.biluo.domain.Category">
+    <id column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="seq" jdbcType="INTEGER" property="seq" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+
+</mapper>

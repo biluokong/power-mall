@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cart-service" />
+        <module name="manager-service" />
+        <module name="search-service" />
+        <module name="auth-server" />
+        <module name="store-service" />
+        <module name="gateway-server" />
+        <module name="product-service" />
+        <module name="member-service" />
+        <module name="order-service" />
+        <module name="common-base" />
+        <module name="common-core" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-server" options="-parameters" />
+      <module name="cart-service" options="-parameters" />
+      <module name="cloud-iaas" options="-parameters" />
+      <module name="common-base" options="-parameters" />
+      <module name="common-core" options="-parameters" />
+      <module name="gateway-server" options="-parameters" />
+      <module name="manager-service" options="-parameters" />
+      <module name="member-service" options="-parameters" />
+      <module name="order-service" options="-parameters" />
+      <module name="power-business" options="-parameters" />
+      <module name="power-common" options="-parameters" />
+      <module name="power-mall" options="-parameters" />
+      <module name="product-service" options="-parameters" />
+      <module name="search-service" options="-parameters" />
+      <module name="store-service" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: product-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 77aeae1c-4581-4440-90f3-cc1defcdf55e
+        group: A_GROUP
+        service: ${spring.application.name}
+      config:
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: ${spring.cloud.nacos.discovery.group}
+        prefix: ${spring.application.name}
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: dev
+
+#  redis:
+#    timeout: 3600s
+#    lettuce:
+#      pool:
+#        max-active: 5
+#        max-idle: 2
+#        max-wait: -1
+#        min-idle: 0
+---
+#server:
+#  port: 8083
+#swagger3:
+#  base-package: com.biluo.controller
+#  name: biluo
+#  url: https://gitee.com/biluoer/project
+#  email: lisi@qq.com
+#  title: 后台管理系统-产品管理模块接口
+#  description: 实现后台管理系统的所有接口,根路径/product-service
+#  license: biluo
+#  licenseUrl: https://gitee.com/biluoer/project
+#  terms-of-service-url: https://gitee.com/biluoer/project
+#  version: 1.0
