@@ -3964,7 +3964,7 @@ INSERT INTO `category` VALUES (109, 0, '车辆', NULL, 'http://47.100.238.122:86
 INSERT INTO `category` VALUES (110, 101, '夏装', NULL, 'http://47.100.238.122:86/group1/M00/00/01/rBNEgGIjAPOATCkPAABeX311tok204.jpg', 1, 1, '2022-03-05 14:19:52', '2022-03-05 14:19:52');
 INSERT INTO `category` VALUES (111, 0, '手机', NULL, 'http://r9wllqg4y.hn-bkt.clouddn.com/FnKl_8n2hKaXgakNtr_Nkr8slFmP', 13, 1, '2022-04-23 09:32:20', '2022-04-23 09:32:20');
 INSERT INTO `category` VALUES (112, 99, '空调', NULL, 'http://re61wndg0.hn-bkt.clouddn.com/FpEqORGGkajUvN7XTSRFmaKZNzyG', 1, 1, '2022-06-28 14:28:25', '2022-06-28 14:28:25');
-INSERT INTO `category` VALUES (113, 111, '华为手机', NULL, 'http://biluoer.oss-cn-beijing.aliyuncs.com/2024-06-30/202857049.jpg?Expires=1720614537&OSSAccessKeyId=LTAI5tHmFmnv9o2qVYAQDCpo&Signature=K2dUBYqvPk2vnovfpZTKVDHEkWQ%3D', 1, 1, '2024-06-30 20:34:20', '2024-06-30 20:34:20');
+INSERT INTO `category` VALUES (113, 111, '华为手机', NULL, 'http://biluoer.oss-cn-beijing.aliyuncs.com/2024-06-30/202857049.jpg', 1, 1, '2024-06-30 20:34:20', '2024-06-30 20:34:20');
 
 -- ----------------------------
 -- Table structure for category_brand
